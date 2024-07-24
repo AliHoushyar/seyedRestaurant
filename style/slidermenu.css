@@ -1,0 +1,269 @@
+@font-face {
+    font-family: "shabnam";
+    src: url("../fonts/Shabnam-FD.woff2") format("woff2");
+}
+
+*{
+    box-sizing: border-box;
+    font-family: "shabnam",sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+}
+
+.bgi{
+  width: 100%;
+  height: 100vh;
+}
+
+.bgi img{
+    width: 100%;
+    height: 100%;
+}
+
+.singleWraper{
+  width: 100%;
+  height: 100%;
+}
+
+.bgimage2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.bgimage{
+  position: absolute;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.foodContainer{
+  width: 35%;
+  height: 600px;
+  background-color: #5bb450;
+  margin-top: 60px;
+  margin-left: 150px;
+  border-radius: 40px;
+  position: absolute;
+}
+
+.infoContainer{
+  width: 60%;
+  height: 500px;
+  background-color: #276221;
+  position: absolute;
+  border-radius: 40px;
+  margin-top: 110px;
+  margin-left: 470px;
+  /* box-shadow: -4px 0px 29px -8px rgb(4, 77, 4); */
+}
+
+.foodImage{
+  position: absolute;
+  width: 400px;
+  z-index: 3;
+  margin-top: 100px;
+  margin-left: 100px;
+  opacity: 0;
+  transform: translateX(-200px) rotate(-90deg);
+  transition: all 500ms ease-in-out;
+  box-shadow: 0px 21px 33px -1px rgba(0,0,0,1);
+  border-radius: 50%;
+}
+
+.infoTitle{
+  position: absolute;
+  display: flex;
+  direction: rtl;
+  color: aliceblue;
+  font-size: 60px;
+  font-weight: bold;
+  right: 60px;
+  top: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 350ms ease-in-out;
+  z-index: 1;
+}
+
+.price{
+  position: absolute;
+  display: flex;
+  color: aliceblue;
+  font-size: 28px;
+  direction: rtl;
+  right: 60px;
+  top: 210px;
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  transform: translateY(50px);
+  z-index: 1;
+}
+
+.prev{
+  font-size: 40px;
+  top: 45%;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.next{
+  font-size: 40px;
+  top: 45%;
+  right: 0;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.material{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  direction: rtl;
+  right: 120px;
+  bottom: 60px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 750ms ease-in-out;
+  z-index: 1;
+}
+
+.matTitle{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+.matTitle img{
+  width: 60px;
+  transition: all 250ms ease-in-out;
+}
+
+.matText{
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-top: 10px;
+  transition: all 250ms ease-in-out;
+}
+
+.seprator{
+  height: 200px;
+  width: 2px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(238,188,81,0) 100%);
+  border-radius: 1px;
+  position: absolute;
+  bottom: 20px;
+  right: 350px;
+  opacity: 0.5;
+}
+
+.des{
+  width: 35%;
+  color: aliceblue;
+  direction: rtl;
+  left: 20%;
+  bottom: 50px;
+  position: absolute;
+  text-align: justify;
+  text-justify: inter-word;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 750ms ease-in-out;
+  z-index: 1;
+}
+
+.foodImage.active{
+  opacity: 1;
+  transform: translateX(0) rotate(0deg);
+}
+
+.infoTitle.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.price.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.material.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.des.active{
+  opacity: 1;
+  transform: translateY(0px);
+}
+@media (max-width: 600px) {
+  .foodContainer{
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 52%;
+    background-color: rgba(0, 255, 0, 0.068);
+    border-radius: 40px 40px 0px 0px;
+  }
+  .foodImage{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 320px;
+  }
+  .infoContainer{
+    margin-left: 10px;
+    margin-top: 355px;
+    width: 90%;
+    height: 40%;
+    border-radius: 0px 0px 40px 40px;
+  }
+  .infoTitle br{
+    display: none;
+  }
+  .infoTitle{
+    font-size: 26px;
+    right: 20px;
+    top: 20px;
+  }
+  .price{
+    right: 20px;
+    top: 60px;
+    font-size: 16px;
+  }
+  .des{
+    display: none;
+  }
+  .material{
+    top: 100px;
+    right: 10px;
+  }
+  .seprator{
+    display: none;
+  }
+}
